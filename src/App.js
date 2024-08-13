@@ -1,12 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { StaticRouter } from "react-router-dom/server";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-datepicker/dist/react-datepicker.css';
-import './assets/Content/site.css';
-import './assets/Content/vendor.css';
-// import 'bootstrap-css-only/css/bootstrap.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import Frame from './components/navbar/Frame';
 import Home from './components/Home/Home';
 import Albums from './components/albums/Albums';
