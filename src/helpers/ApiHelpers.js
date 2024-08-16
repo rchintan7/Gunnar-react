@@ -1,5 +1,3 @@
-import { API_BASE_URL } from "../config";
-
 const defaultHeaders = (token) => ({
   "Content-Type": "application/json",
   Accept: "application/json",
@@ -8,8 +6,7 @@ const defaultHeaders = (token) => ({
 });
 
 export const getHelper = async (url, token) => {
-  const fullUrl = API_BASE_URL + url;
-  const response = await fetch(fullUrl, {
+  const response = await fetch(url, {
     headers: defaultHeaders(token),
     method: "GET",
   });
@@ -20,8 +17,7 @@ export const getHelper = async (url, token) => {
 };
 
 export const postHelper = async (url, request, token) => {
-  const fullUrl = API_BASE_URL + url;
-const response = await fetch(fullUrl, {
+const response = await fetch(url, {
     headers: defaultHeaders(token),
     method: "POST",
     body: request ? JSON.stringify(request) : null,
@@ -33,8 +29,7 @@ const response = await fetch(fullUrl, {
 };
 
 export const postImageHelper = async (url, formData, token) => {
-  const fullUrl = API_BASE_URL + url;
-const response = await fetch(fullUrl, {
+const response = await fetch(url, {
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -49,8 +44,7 @@ const response = await fetch(fullUrl, {
 };
 
 export const putHelper = async (url, request, token) => {
-  const fullUrl = API_BASE_URL + url;
-const response = await fetch(fullUrl, {
+const response = await fetch(url, {
     headers: defaultHeaders(token),
     method: "PUT",
     body: request ? JSON.stringify(request) : null,
@@ -62,8 +56,7 @@ const response = await fetch(fullUrl, {
 };
 
 export const patchHelper = async (url, request, token) => {
-  const fullUrl = API_BASE_URL + url;
-const response = await fetch(fullUrl, {
+const response = await fetch(url, {
     headers: defaultHeaders(token),
     method: "PATCH",
     body: request ? JSON.stringify(request) : null,
@@ -75,8 +68,7 @@ const response = await fetch(fullUrl, {
 };
 
 export const deleteHelper = async (url, token) => {
-  const fullUrl = API_BASE_URL + url;
-const response = await fetch(fullUrl, {
+const response = await fetch(url, {
     headers: defaultHeaders(token),
     method: "DELETE",
   });
